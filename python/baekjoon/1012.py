@@ -12,7 +12,7 @@ def dfs(x, y, table, m, n):
         if (0 <= nx < m) and (0 <= ny < n) and table[ny][nx] == 1:
             table[ny][nx] = 0
             dfs(nx, ny, table, m, n)
-                
+
 for _ in range(int(input())):
     m, n, k = map(int, input().split())
     table = [[0 for _ in range(m)] for _ in range(n)]
