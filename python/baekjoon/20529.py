@@ -14,10 +14,10 @@ for _ in range(int(input())): # 테스트 케이스 수(3명)
     if N > 32: # 9999집
         print(0)
     else:
-        case = 12 # 최대 가능 거리를 default로 먼저 선언
+        result = 12 # 최대 가능 거리를 default로 먼저 선언
 
         for i in range(N): # 열심히 비교해라
             for j in range(i+1, N):
                 for k in range(j+1, N):
-                    case = min(case, distance([mbti[i], mbti[j], mbti[k]])) #min() 함수 사용해서 더 적은 거리를 case로 반영
-        print(case)
+                    case = min(result, distance([mbti[i], mbti[j], mbti[k]]))
+        print(result)
